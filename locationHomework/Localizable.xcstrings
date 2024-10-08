@@ -1,0 +1,66 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Apparently, you have banned access to geolocation!" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "По всей видимости Вы запретили доступ к геолокации!"
+          }
+        }
+      }
+    },
+    "Build route" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Построить маршрут"
+          }
+        }
+      }
+    },
+    "Go to the settings and allow access." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зайдите в настройки и разрешите доступ."
+          }
+        }
+      }
+    },
+    "I want to come here!" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Хочу сюда"
+          }
+        }
+      }
+    },
+    "Reset" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сброс"
+          }
+        }
+      }
+    },
+    "You didn't set the end point!" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вы не задали конечную точку!"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

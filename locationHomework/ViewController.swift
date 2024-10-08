@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     private lazy var buildRouteButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Построить маршрут", for: .normal)
+        button.setTitle(NSLocalizedString("Build route", comment: ""), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 19.0, weight: .bold)
         button.backgroundColor = .systemBlue
@@ -111,7 +111,7 @@ class ViewController: UIViewController {
         currHeight?.isActive = true
         navigationItem.rightBarButtonItem = menuBarItem
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Сброс", style: .plain, target: self, action: #selector(locationReset))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Reset", comment: ""), style: .plain, target: self, action: #selector(locationReset))
         
         navigationItem.rightBarButtonItem?.tintColor = .black
         navigationItem.leftBarButtonItem?.tintColor = .black
@@ -140,8 +140,10 @@ class ViewController: UIViewController {
         } else {
             AlertView.alert.show(
                 in: self,
-                text: "По всей видимости Вы запретили доступ к геолокации!",
-                message: "Зайдите в настройки и разрешите доступ."
+                text: NSLocalizedString("Apparently, you have banned access to geolocation!", comment: ""),
+                message: NSLocalizedString("Go to the settings and allow access.", comment: "")
+//                text: "По всей видимости Вы запретили доступ к геолокации!",
+//                message: "Зайдите в настройки и разрешите доступ."
             )
         }
     }
@@ -156,7 +158,7 @@ class ViewController: UIViewController {
     
         annotationDestination = MKPointAnnotation()
         annotationDestination?.coordinate = location
-        annotationDestination?.title = "Хочу сюда!"
+        annotationDestination?.title = NSLocalizedString("I want to come here!", comment: "")
         mapView.addAnnotation(annotationDestination!)
         
         buildRouteButton.isHidden = false
@@ -166,7 +168,7 @@ class ViewController: UIViewController {
         guard let annotationDestination else {
             AlertView.alert.show(
                 in: self,
-                text: "Вы не задали конечную точку!"
+                text: NSLocalizedString("You didn't set the end point!", comment: "")
             )
             return
         }
@@ -176,8 +178,8 @@ class ViewController: UIViewController {
         if locationManager.authorizationStatus != .authorizedWhenInUse {
             AlertView.alert.show(
                 in: self,
-                text: "По всей видимости Вы запретили доступ к геолокации!",
-                message: "Зайдите в настройки и разрешите доступ."
+                text: NSLocalizedString("Apparently, you have banned access to geolocation!", comment: ""),
+                message: NSLocalizedString("Go to the settings and allow access.", comment: "")
             )
         }
         
